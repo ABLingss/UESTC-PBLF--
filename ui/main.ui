@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainInterface</class>
+ <widget class="QMainWindow" name="MainInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>992</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string>QMainWindow {
+    background-color: #F5F5F5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QPushButton {
+    background-color: #0078D7;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    min-width: 150px;
+}
+
+QPushButton:hover {
+    background-color: #005FAC;
+}
+
+QPushButton:pressed {
+    background-color: #003D79;
+}
+
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>60</y>
+      <width>911</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="welcomeLabel">
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>欢迎使用航班管理系统</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="profileManagementButton">
+       <property name="text">
+        <string>个人信息管理</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="commentManagementButton">
+       <property name="text">
+        <string>评论管理</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="flightDetailsButton">
+       <property name="text">
+        <string>航班详情</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QPushButton" name="flightRecommendationButton">
+       <property name="text">
+        <string>航班推荐</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="flightSearchButton">
+       <property name="text">
+        <string>航班搜索</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="flightSortButton">
+       <property name="text">
+        <string>航班排序</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="orderManagementButton">
+       <property name="text">
+        <string>订单管理</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QPushButton" name="logout">
+       <property name="text">
+        <string>退出登录</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="about">
+       <property name="text">
+        <string>关于</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>992</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

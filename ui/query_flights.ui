@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FlightSearchWindow</class>
+ <widget class="QMainWindow" name="FlightSearchWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>972</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string>QMainWindow {
+    background-color: #F0F0F0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QComboBox, QPushButton, QTableWidget {
+    font-size: 14px;
+}
+
+QComboBox {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    min-width: 200px;
+}
+
+QPushButton {
+    background-color: #0078D7;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #005FAC;
+}
+
+QTableWidget {
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+QTableWidget::item {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+QTableWidget::horizontalHeader {
+    background-color: #0078D7;
+    color: white;
+}
+
+QTableWidget::horizontalHeader::section {
+    border: 1px solid #ccc;
+    border-style: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0">
+    <property name="spacing">
+     <number>20</number>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="searchLayout">
+      <item>
+       <widget class="QLabel" name="departureLabel">
+        <property name="text">
+         <string>出发地:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="departureComboBox"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="destinationLabel">
+        <property name="text">
+         <string>目的地:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="destinationComboBox"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="departureTimeLabel">
+        <property name="text">
+         <string>出发时间:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="departureTimeComboBox"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="searchButton">
+        <property name="text">
+         <string>查询</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="flightTable">
+      <property name="rowCount">
+       <number>0</number>
+      </property>
+      <property name="columnCount">
+       <number>4</number>
+      </property>
+      <property name="horizontalHeaderLabels" stdset="0">
+       <stringlist>
+        <string>航班号</string>
+        <string>出发地</string>
+        <string>目的地</string>
+        <string>出发时间</string>
+       </stringlist>
+      </property>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="backToMainButton">
+      <property name="text">
+       <string>返回主界面</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

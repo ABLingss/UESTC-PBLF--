@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FlightRecommendationWindow</class>
+ <widget class="QMainWindow" name="FlightRecommendationWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string>QMainWindow {
+    background-color: #F5F5F5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QPushButton {
+    background-color: #0078D7;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    min-width: 150px;
+}
+
+QPushButton:hover {
+    background-color: #005FAC;
+}
+
+QComboBox {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+QTextEdit {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+}
+
+QTableWidget {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+}
+
+QTableWidget::item {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+QTableWidget::horizontalHeader {
+    background-color: #0078D7;
+    color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+
+    <!-- 标题 -->
+    <item>
+     <widget class="QLabel" name="recommendationLabel">
+      <property name="text">
+       <string>航班比价推荐</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- 输入框: 出发地和目的地 -->
+    <item>
+     <layout class="QHBoxLayout" name="locationLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="departureLabel">
+        <property name="text">
+         <string>出发地：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="departureComboBox">
+        <property name="placeholderText">
+         <string>选择出发地</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="destinationLabel">
+        <property name="text">
+         <string>目的地：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="destinationComboBox">
+        <property name="placeholderText">
+         <string>选择目的地</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="findFlightsButton">
+        <property name="text">
+         <string>查找航班</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- 显示依据信息 -->
+    <item>
+     <widget class="QLabel" name="criteriaLabel">
+      <property name="text">
+       <string>航班推荐依据：</string>
+      </property>
+     </widget>
+    </item>
+
+    <item>
+     <layout class="QVBoxLayout" name="criteriaLayout">
+      <item>
+       <widget class="QLabel" name="seasonCriteria">
+        <property name="text">
+         <string>淡旺季数据：依据目的地的季节性需求，推荐合适的航班时间。</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="airlineCriteria">
+        <property name="text">
+         <string>航空公司选择：根据用户的航空公司偏好，显示不同航空公司的航班。</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="dateCriteria">
+        <property name="text">
+         <string>日期出行数据：推荐基于当前日期的航班情况，适合出行的日期和航班。</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="directTransitCriteria">
+        <property name="text">
+         <string>直达与中转：提供直达与中转的选择依据，适应不同的时间和预算。</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- 显示推荐航班列表 -->
+    <item>
+     <widget class="QTableWidget" name="flightsTableWidget">
+      <property name="columnCount">
+       <number>5</number>
+      </property>
+      <property name="horizontalHeaderLabels">
+       <stringlist>
+        <string>航班号</string>
+        <string>航空公司</string>
+        <string>出发时间</string>
+        <string>到达时间</string>
+        <string>票价</string>
+       </stringlist>
+      </property>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+     </widget>
+    </item>
+
+    <!-- 返回主界面按钮 -->
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="backToMainButton">
+        <property name="text">
+         <string>返回主界面</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

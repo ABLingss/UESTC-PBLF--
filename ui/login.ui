@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1083</width>
+    <height>821</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>机票管理系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout">
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>机票管理系统 ✈️</string>
+      </property>
+      <property name="alignment">
+       <enum>Qt::AlignCenter</enum>
+      </property>
+      <property name="styleSheet">
+       <string>font-size: 26px; font-weight: bold; color: #2c3e50; margin-top: 30px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1000</width>
+        <height>700</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="loginTab">
+       <attribute name="title">
+        <string>登录</string>
+       </attribute>
+       <layout class="QVBoxLayout">
+        <!-- 用户名输入框 -->
+        <item>
+         <widget class="QLineEdit" name="usernameLogin">
+          <property name="placeholderText">
+           <string>请输入用户名</string>
+          </property>
+          <property name="styleSheet">
+           <string>border-radius: 8px; padding: 12px; font-size: 16px; background-color: #ecf0f1; border: 1px solid #bdc3c7; margin-bottom: 15px;</string>
+          </property>
+         </widget>
+        </item>
+        <!-- 密码输入框 -->
+        <item>
+         <widget class="QLineEdit" name="passwordLogin">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>请输入密码</string>
+          </property>
+          <property name="styleSheet">
+           <string>border-radius: 8px; padding: 12px; font-size: 16px; background-color: #ecf0f1; border: 1px solid #bdc3c7; margin-bottom: 25px;</string>
+          </property>
+         </widget>
+        </item>
+        <!-- 登录按钮 -->
+        <item>
+         <widget class="QPushButton" name="loginButton">
+          <property name="text">
+           <string>登录 🚀</string>
+          </property>
+          <property name="styleSheet">
+           <string>
+            background-color: #3498db;
+            color: white;
+            border-radius: 12px;
+            font-size: 18px;
+            padding: 18px;
+            border: none;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+           </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="registerTab">
+       <attribute name="title">
+        <string>注册</string>
+       </attribute>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QLineEdit" name="usernameRegister">
+          <property name="placeholderText">
+           <string>请输入用户名</string>
+          </property>
+          <property name="styleSheet">
+           <string>border-radius: 8px; padding: 10px; font-size: 14px; background-color: #ecf0f1; border: 1px solid #bdc3c7; margin-bottom: 10px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="passwordRegister">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>请输入密码</string>
+          </property>
+          <property name="styleSheet">
+           <string>border-radius: 8px; padding: 10px; font-size: 14px; background-color: #ecf0f1; border: 1px solid #bdc3c7; margin-bottom: 10px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="phoneRegister">
+          <property name="placeholderText">
+           <string>请输入手机号</string>
+          </property>
+          <property name="styleSheet">
+           <string>border-radius: 8px; padding: 10px; font-size: 14px; background-color: #ecf0f1; border: 1px solid #bdc3c7; margin-bottom: 10px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_2">
+          <property name="placeholderText">
+           <string>请输入身份证号</string>
+          </property>
+          <property name="styleSheet">
+           <string>border-radius: 8px; padding: 10px; font-size: 14px; background-color: #ecf0f1; border: 1px solid #bdc3c7; margin-bottom: 10px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="emailRegister">
+          <property name="placeholderText">
+           <string>请输入邮箱</string>
+          </property>
+          <property name="styleSheet">
+           <string>border-radius: 8px; padding: 10px; font-size: 14px; background-color: #ecf0f1; border: 1px solid #bdc3c7; margin-bottom: 25px;</string>
+          </property>
+         </widget>
+        </item>
+        <!-- 注册按钮 -->
+        <item>
+         <widget class="QPushButton" name="registerButton">
+          <property name="text">
+           <string>注册 ✨</string>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: #3498db; color: white; border-radius: 8px; font-size: 16px; padding: 12px; border: none; margin-top: 10px;</string>
+          </property>
+         </widget>
+        </item>
+        <!-- 取消按钮 -->
+        <item>
+         <widget class="QPushButton" name="cancelButton">
+          <property name="text">
+           <string>取消 ❌</string>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: #e74c3c; color: white; border-radius: 8px; font-size: 16px; padding: 12px; border: none; margin-top: 10px;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

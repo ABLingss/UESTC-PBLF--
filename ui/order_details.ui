@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrderDetailsWindow</class>
+ <widget class="QMainWindow" name="OrderDetailsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string>QMainWindow {
+    background-color: #F5F5F5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QPushButton {
+    background-color: #0078D7;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    min-width: 150px;
+}
+
+QPushButton:hover {
+    background-color: #005FAC;
+}
+.
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+QTextEdit {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+
+    <!-- 标题 -->
+    <item>
+     <widget class="QLabel" name="orderDetailsLabel">
+      <property name="text">
+       <string>订单详情</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- 订单信息 -->
+    <item>
+     <layout class="QVBoxLayout" name="orderInfoLayout">
+      <item>
+       <widget class="QLabel" name="orderNumberLabel">
+        <property name="text">
+         <string>订单号: 123456</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="usernameLabel">
+        <property name="text">
+         <string>用户名: user01</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="flightNumberLabel">
+        <property name="text">
+         <string>航班号: ABC123</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="departureLabel">
+        <property name="text">
+         <string>出发地: 北京</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="destinationLabel">
+        <property name="text">
+         <string>目的地: 上海</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="seatNumberLabel">
+        <property name="text">
+         <string>座位号: 12A</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="priceLabel">
+        <property name="text">
+         <string>价格: ¥500</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="statusLabel">
+        <property name="text">
+         <string>订单状态: 已支付</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- 返回按钮 -->
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="backToPreviousButton">
+        <property name="text">
+         <string>返回上一页</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

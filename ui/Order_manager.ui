@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrderEditWindow</class>
+ <widget class="QMainWindow" name="OrderEditWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string>QMainWindow {
+    background-color: #F5F5F5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QPushButton {
+    background-color: #0078D7;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    min-width: 150px;
+}
+
+QPushButton:hover {
+    background-color: #005FAC;
+}
+
+QLineEdit {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    padding: 5px;
+}
+
+QLabel {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+
+    <!-- 标题 -->
+    <item>
+     <widget class="QLabel" name="editOrderTitleLabel">
+      <property name="text">
+       <string>编辑订单信息</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="styleSheet">
+       <string>font-size: 20px; font-weight: bold; color: #333;</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- 订单号 -->
+    <item>
+     <layout class="QHBoxLayout" name="orderNumberLayout">
+      <item>
+       <widget class="QLabel" name="orderNumberLabel">
+        <property name="text">
+         <string>订单号：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="orderNumberLineEdit">
+        <property name="placeholderText">
+         <string>修改订单号</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- 航班号 -->
+    <item>
+     <layout class="QHBoxLayout" name="flightNumberLayout">
+      <item>
+       <widget class="QLabel" name="flightNumberLabel">
+        <property name="text">
+         <string>航班号：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="flightNumberLineEdit">
+        <property name="placeholderText">
+         <string>修改航班号</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- 座位号 -->
+    <item>
+     <layout class="QHBoxLayout" name="seatNumberLayout">
+      <item>
+       <widget class="QLabel" name="seatNumberLabel">
+        <property name="text">
+         <string>座位号：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="seatNumberLineEdit">
+        <property name="placeholderText">
+         <string>修改座位号</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- 订单状态 -->
+    <item>
+     <layout class="QHBoxLayout" name="orderStatusLayout">
+      <item>
+       <widget class="QLabel" name="orderStatusLabel">
+        <property name="text">
+         <string>订单状态：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="orderStatusLineEdit">
+        <property name="placeholderText">
+         <string>修改订单状态</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- 按钮 -->
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="saveOrderButton">
+        <property name="text">
+         <string>保存修改</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="backButton">
+        <property name="text">
+         <string>返回上一页</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
