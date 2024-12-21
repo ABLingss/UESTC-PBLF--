@@ -49,11 +49,13 @@ class Ui_FlightDetailsWindow(object):
         self.seatsTableWidget.setRowCount(0)
         self.verticalLayout.addWidget(self.seatsTableWidget)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         self.buttonLayout = QtWidgets.QHBoxLayout()
         self.buttonLayout.setObjectName("buttonLayout")
         self.backToPreviousButton = QtWidgets.QPushButton(self.centralwidget)
+        self.backToPreviousButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.backToPreviousButton.setObjectName("backToPreviousButton")
         self.buttonLayout.addWidget(self.backToPreviousButton)
         self.verticalLayout.addLayout(self.buttonLayout)
@@ -117,7 +119,7 @@ class Ui_FlightDetailsWindow(object):
         self.arrivalTimeLabel.setText(_translate("FlightDetailsWindow", "到达时间: 2024-12-20 14:00"))
         self.seatsInfoLabel.setText(_translate("FlightDetailsWindow", "空余座位和价格："))
         self.pushButton.setText(_translate("FlightDetailsWindow", "下订单"))
-        self.backToPreviousButton.setText(_translate("FlightDetailsWindow", "返回上一页"))
+        self.backToPreviousButton.setText(_translate("FlightDetailsWindow", "返回主菜单"))
 
 if __name__ == "__main__":
     import sys

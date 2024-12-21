@@ -54,6 +54,7 @@ class Ui_OrderDetailsWindow(object):
         self.buttonLayout = QtWidgets.QHBoxLayout()
         self.buttonLayout.setObjectName("buttonLayout")
         self.backToPreviousButton = QtWidgets.QPushButton(self.centralwidget)
+        self.backToPreviousButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.backToPreviousButton.setObjectName("backToPreviousButton")
         self.buttonLayout.addWidget(self.backToPreviousButton)
         self.verticalLayout.addLayout(self.buttonLayout)
@@ -81,7 +82,7 @@ class Ui_OrderDetailsWindow(object):
 "QPushButton:hover {\n"
 "    background-color: #005FAC;\n"
 "}\n"
-"\n"
+".\n"
 "QLabel {\n"
 "    font-size: 16px;\n"
 "    font-weight: bold;\n"
@@ -104,3 +105,12 @@ class Ui_OrderDetailsWindow(object):
         self.priceLabel.setText(_translate("OrderDetailsWindow", "价格: ¥500"))
         self.statusLabel.setText(_translate("OrderDetailsWindow", "订单状态: 已支付"))
         self.backToPreviousButton.setText(_translate("OrderDetailsWindow", "返回上一页"))
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    OrderDetailsWindow = QtWidgets.QMainWindow()
+    ui = Ui_OrderDetailsWindow()
+    ui.setupUi(OrderDetailsWindow)
+    OrderDetailsWindow.show()
+    sys.exit(app.exec_())

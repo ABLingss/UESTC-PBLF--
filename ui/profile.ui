@@ -50,37 +50,22 @@ QTextEdit {
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="spacing">
-     <number>10</number>
-    </property>
-    <property name="leftMargin">
-     <number>20</number>
-    </property>
-    <property name="topMargin">
-     <number>20</number>
-    </property>
-    <property name="rightMargin">
-     <number>20</number>
-    </property>
-    <property name="bottomMargin">
-     <number>20</number>
-    </property>
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
      <widget class="QLabel" name="profileTitleLabel">
       <property name="text">
        <string>个人信息管理</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item row="1" column="0">
      <widget class="QLabel" name="currentInfoLabel">
       <property name="text">
        <string>当前信息：</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item row="2" column="0" colspan="2">
      <layout class="QVBoxLayout" name="currentInfoLayout">
       <item>
        <widget class="QLabel" name="currentUsernameLabel">
@@ -112,14 +97,27 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="3" column="0">
      <widget class="QLabel" name="editInfoLabel">
       <property name="text">
        <string>修改信息：</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="statusLabel">
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: red;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="2">
      <layout class="QHBoxLayout" name="usernameLayout">
       <item>
        <widget class="QLabel" name="usernameLabel">
@@ -137,21 +135,21 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="5" column="0" colspan="2">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>TextLabel</string>
+           <string>身份证号：</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLineEdit" name="IDLineEdit">
           <property name="placeholderText">
-           <string>修改用户名（留空表示不修改）</string>
+           <string>修改身份证号（留空表示不修改）</string>
           </property>
          </widget>
         </item>
@@ -159,7 +157,7 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="6" column="0" colspan="2">
      <layout class="QHBoxLayout" name="emailLayout">
       <item>
        <widget class="QLabel" name="emailLabel">
@@ -177,7 +175,7 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="7" column="0" colspan="2">
      <layout class="QHBoxLayout" name="phoneLayout">
       <item>
        <widget class="QLabel" name="phoneLabel">
@@ -195,7 +193,7 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="8" column="0" colspan="2">
      <layout class="QHBoxLayout" name="passwordLayout">
       <item>
        <widget class="QLabel" name="passwordLabel">
@@ -216,10 +214,13 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="9" column="0" colspan="2">
      <layout class="QHBoxLayout" name="buttonLayout">
       <item>
        <widget class="QPushButton" name="saveButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>保存修改</string>
         </property>
@@ -227,6 +228,9 @@ QTextEdit {
       </item>
       <item>
        <widget class="QPushButton" name="backButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>返回主菜单</string>
         </property>

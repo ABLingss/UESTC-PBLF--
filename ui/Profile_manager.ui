@@ -144,14 +144,14 @@ QTextEdit {
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>TextLabel</string>
+           <string>身份证号：</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLineEdit" name="IDLineEdit">
           <property name="placeholderText">
-           <string>修改用户名（留空表示不修改）</string>
+           <string>修改身份证号（留空表示不修改）</string>
           </property>
          </widget>
         </item>
@@ -220,6 +220,9 @@ QTextEdit {
      <layout class="QHBoxLayout" name="buttonLayout">
       <item>
        <widget class="QPushButton" name="saveButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>保存修改</string>
         </property>
@@ -227,6 +230,9 @@ QTextEdit {
       </item>
       <item>
        <widget class="QPushButton" name="backButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>返回上一页</string>
         </property>

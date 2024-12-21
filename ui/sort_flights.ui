@@ -92,7 +92,10 @@ QTableWidget::horizontalHeader::section {
       </item>
       <item>
        <widget class="QComboBox" name="sortCriteriaComboBox">
-        <property name="placeholderText" stdset="0">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="placeholderText">
          <string>选择排序条件</string>
         </property>
         <item>
@@ -109,6 +112,9 @@ QTableWidget::horizontalHeader::section {
       </item>
       <item>
        <widget class="QPushButton" name="backToMainButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>返回主界面</string>
         </property>
@@ -118,6 +124,9 @@ QTableWidget::horizontalHeader::section {
     </item>
     <item>
      <widget class="QPushButton" name="sortButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="text">
        <string>排序 🔄</string>
       </property>

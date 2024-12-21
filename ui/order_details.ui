@@ -59,8 +59,6 @@ QTextEdit {
     <property name="bottomMargin">
      <number>20</number>
     </property>
-
-    <!-- 标题 -->
     <item>
      <widget class="QLabel" name="orderDetailsLabel">
       <property name="text">
@@ -68,8 +66,6 @@ QTextEdit {
       </property>
      </widget>
     </item>
-
-    <!-- 订单信息 -->
     <item>
      <layout class="QVBoxLayout" name="orderInfoLayout">
       <item>
@@ -130,12 +126,13 @@ QTextEdit {
       </item>
      </layout>
     </item>
-
-    <!-- 返回按钮 -->
     <item>
      <layout class="QHBoxLayout" name="buttonLayout">
       <item>
        <widget class="QPushButton" name="backToPreviousButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>返回上一页</string>
         </property>
@@ -143,7 +140,6 @@ QTextEdit {
       </item>
      </layout>
     </item>
-
    </layout>
   </widget>
  </widget>

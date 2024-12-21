@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>972</width>
-    <height>635</height>
+    <width>970</width>
+    <height>565</height>
    </rect>
   </property>
   <property name="styleSheet">
@@ -81,38 +81,56 @@ QTableWidget::horizontalHeader::section {
      <layout class="QHBoxLayout" name="searchLayout">
       <item>
        <widget class="QLabel" name="departureLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>出发地:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="departureComboBox"/>
+       <widget class="QLineEdit" name="lineEdit"/>
       </item>
       <item>
        <widget class="QLabel" name="destinationLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>目的地:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="destinationComboBox"/>
+       <widget class="QLineEdit" name="lineEdit_2"/>
       </item>
       <item>
-       <widget class="QLabel" name="departureTimeLabel">
+       <widget class="QPushButton" name="searchButtonDir">
         <property name="text">
-         <string>出发时间:</string>
+         <string>查询直达</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QComboBox" name="departureTimeComboBox"/>
-      </item>
-      <item>
-       <widget class="QPushButton" name="searchButton">
+       <widget class="QPushButton" name="searchButtonTran">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
-         <string>查询</string>
+         <string>查询中转</string>
         </property>
        </widget>
       </item>
@@ -142,6 +160,9 @@ QTableWidget::horizontalHeader::section {
     </item>
     <item>
      <widget class="QPushButton" name="backToMainButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="text">
        <string>返回主界面</string>
       </property>

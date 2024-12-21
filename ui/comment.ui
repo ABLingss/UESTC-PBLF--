@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>692</width>
     <height>602</height>
    </rect>
   </property>
@@ -59,17 +59,37 @@ QLabel {
     <property name="bottomMargin">
      <number>20</number>
     </property>
-    
-    <!-- 评论标题 -->
     <item>
      <widget class="QLabel" name="commentLabel">
       <property name="text">
        <string>添加评论</string>
       </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
      </widget>
     </item>
-    
-    <!-- 评论输入框 -->
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>##### 选择您要评论的航空公司</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::MarkdownText</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item>
      <widget class="QTextEdit" name="commentTextEdit">
       <property name="placeholderText">
@@ -77,8 +97,6 @@ QLabel {
       </property>
      </widget>
     </item>
-    
-    <!-- 按钮布局 -->
     <item>
      <layout class="QHBoxLayout" name="buttonLayout">
       <property name="spacing">
@@ -86,6 +104,9 @@ QLabel {
       </property>
       <item>
        <widget class="QPushButton" name="submitCommentButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>提交评论</string>
         </property>
@@ -93,6 +114,9 @@ QLabel {
       </item>
       <item>
        <widget class="QPushButton" name="backToMainButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>返回主界面</string>
         </property>

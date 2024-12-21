@@ -64,9 +64,11 @@ class Ui_OrderEditWindow(object):
         self.buttonLayout = QtWidgets.QHBoxLayout()
         self.buttonLayout.setObjectName("buttonLayout")
         self.saveOrderButton = QtWidgets.QPushButton(self.centralwidget)
+        self.saveOrderButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.saveOrderButton.setObjectName("saveOrderButton")
         self.buttonLayout.addWidget(self.saveOrderButton)
         self.backButton = QtWidgets.QPushButton(self.centralwidget)
+        self.backButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.backButton.setObjectName("backButton")
         self.buttonLayout.addWidget(self.backButton)
         self.verticalLayout.addLayout(self.buttonLayout)
@@ -107,8 +109,8 @@ class Ui_OrderEditWindow(object):
 "    font-weight: bold;\n"
 "    color: #333;\n"
 "}"))
-        self.editOrderTitleLabel.setText(_translate("OrderEditWindow", "编辑订单信息"))
         self.editOrderTitleLabel.setStyleSheet(_translate("OrderEditWindow", "font-size: 20px; font-weight: bold; color: #333;"))
+        self.editOrderTitleLabel.setText(_translate("OrderEditWindow", "编辑订单信息"))
         self.orderNumberLabel.setText(_translate("OrderEditWindow", "订单号："))
         self.orderNumberLineEdit.setPlaceholderText(_translate("OrderEditWindow", "修改订单号"))
         self.flightNumberLabel.setText(_translate("OrderEditWindow", "航班号："))
@@ -119,13 +121,3 @@ class Ui_OrderEditWindow(object):
         self.orderStatusLineEdit.setPlaceholderText(_translate("OrderEditWindow", "修改订单状态"))
         self.saveOrderButton.setText(_translate("OrderEditWindow", "保存修改"))
         self.backButton.setText(_translate("OrderEditWindow", "返回上一页"))
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    OrderEditWindow = QtWidgets.QMainWindow()
-    ui = Ui_OrderEditWindow()
-    ui.setupUi(OrderEditWindow)
-    OrderEditWindow.show()
-    sys.exit(app.exec_())
-    OrderEditWindow.close()

@@ -142,6 +142,9 @@ QTableWidget::horizontalHeader {
     </item>
     <item>
      <widget class="QPushButton" name="pushButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
       <property name="text">
        <string>下订单</string>
       </property>
@@ -151,6 +154,9 @@ QTableWidget::horizontalHeader {
      <layout class="QHBoxLayout" name="buttonLayout">
       <item>
        <widget class="QPushButton" name="backToPreviousButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>返回主菜单</string>
         </property>
