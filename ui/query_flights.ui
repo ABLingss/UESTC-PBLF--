@@ -61,7 +61,7 @@ QTableWidget::horizontalHeader::section {
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,1,0">
     <property name="spacing">
      <number>20</number>
     </property>
@@ -93,7 +93,7 @@ QTableWidget::horizontalHeader::section {
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QComboBox" name="startbox"/>
       </item>
       <item>
        <widget class="QLabel" name="destinationLabel">
@@ -109,10 +109,13 @@ QTableWidget::horizontalHeader::section {
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2"/>
+       <widget class="QComboBox" name="destinationbox"/>
       </item>
       <item>
        <widget class="QPushButton" name="searchButtonDir">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>查询直达</string>
         </property>
@@ -135,6 +138,13 @@ QTableWidget::horizontalHeader::section {
        </widget>
       </item>
      </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="statuslabel">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QTableWidget" name="flightTable">

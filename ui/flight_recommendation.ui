@@ -64,30 +64,15 @@ QTableWidget::horizontalHeader {
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="spacing">
-     <number>10</number>
-    </property>
-    <property name="leftMargin">
-     <number>20</number>
-    </property>
-    <property name="topMargin">
-     <number>20</number>
-    </property>
-    <property name="rightMargin">
-     <number>20</number>
-    </property>
-    <property name="bottomMargin">
-     <number>20</number>
-    </property>
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
      <widget class="QLabel" name="recommendationLabel">
       <property name="text">
        <string>航班比价推荐</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item row="1" column="0">
      <layout class="QHBoxLayout" name="locationLayout">
       <property name="spacing">
        <number>10</number>
@@ -104,7 +89,7 @@ QTableWidget::horizontalHeader {
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
         </property>
-        <property name="placeholderText">
+        <property name="placeholderText" stdset="0">
          <string>选择出发地</string>
         </property>
        </widget>
@@ -121,7 +106,7 @@ QTableWidget::horizontalHeader {
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
         </property>
-        <property name="placeholderText">
+        <property name="placeholderText" stdset="0">
          <string>选择目的地</string>
         </property>
        </widget>
@@ -138,14 +123,25 @@ QTableWidget::horizontalHeader {
       </item>
      </layout>
     </item>
-    <item>
-     <widget class="QLabel" name="criteriaLabel">
-      <property name="text">
-       <string>航班推荐依据：</string>
-      </property>
-     </widget>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="criteriaLabel">
+        <property name="text">
+         <string>航班推荐依据：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="statuslabel">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
-    <item>
+    <item row="3" column="0">
      <layout class="QVBoxLayout" name="criteriaLayout">
       <item>
        <widget class="QLabel" name="seasonCriteria">
@@ -177,40 +173,38 @@ QTableWidget::horizontalHeader {
       </item>
      </layout>
     </item>
-    <item>
-     <widget class="QTableWidget" name="flightsTableWidget">
-      <property name="columnCount">
-       <number>5</number>
-      </property>
-      <property name="horizontalHeaderLabels" stdset="0">
-       <stringlist>
-        <string>航班号</string>
-        <string>航空公司</string>
-        <string>出发时间</string>
-        <string>到达时间</string>
-        <string>票价</string>
-       </stringlist>
-      </property>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="buttonLayout">
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="backToMainButton">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
+       <widget class="QTableWidget" name="flightsTableWidgetDir">
+        <property name="columnCount">
+         <number>0</number>
         </property>
-        <property name="text">
-         <string>返回主界面</string>
+        <property name="horizontalHeaderLabels" stdset="0">
+         <stringlist>
+          <string>航班号</string>
+          <string>航空公司</string>
+          <string>出发时间</string>
+          <string>到达时间</string>
+          <string>票价</string>
+         </stringlist>
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QTableWidget" name="flightsTableWidgetCon"/>
+      </item>
      </layout>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="backToMainButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>返回主界面</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

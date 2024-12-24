@@ -50,37 +50,22 @@ QTextEdit {
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="spacing">
-     <number>10</number>
-    </property>
-    <property name="leftMargin">
-     <number>20</number>
-    </property>
-    <property name="topMargin">
-     <number>20</number>
-    </property>
-    <property name="rightMargin">
-     <number>20</number>
-    </property>
-    <property name="bottomMargin">
-     <number>20</number>
-    </property>
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
      <widget class="QLabel" name="profileTitleLabel">
       <property name="text">
        <string>修改个人信息</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item row="1" column="0">
      <widget class="QLabel" name="currentInfoLabel">
       <property name="text">
        <string>当前信息：</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item row="2" column="0" colspan="2">
      <layout class="QVBoxLayout" name="currentInfoLayout">
       <item>
        <widget class="QLabel" name="currentUsernameLabel">
@@ -112,14 +97,21 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="3" column="0">
      <widget class="QLabel" name="editInfoLabel">
       <property name="text">
        <string>修改信息：</string>
       </property>
      </widget>
     </item>
-    <item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="2">
      <layout class="QHBoxLayout" name="usernameLayout">
       <item>
        <widget class="QLabel" name="usernameLabel">
@@ -137,7 +129,7 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="5" column="0" colspan="2">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -159,7 +151,7 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="6" column="0" colspan="2">
      <layout class="QHBoxLayout" name="emailLayout">
       <item>
        <widget class="QLabel" name="emailLabel">
@@ -177,7 +169,7 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="7" column="0" colspan="2">
      <layout class="QHBoxLayout" name="phoneLayout">
       <item>
        <widget class="QLabel" name="phoneLabel">
@@ -195,7 +187,7 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="8" column="0" colspan="2">
      <layout class="QHBoxLayout" name="passwordLayout">
       <item>
        <widget class="QLabel" name="passwordLabel">
@@ -216,7 +208,7 @@ QTextEdit {
       </item>
      </layout>
     </item>
-    <item>
+    <item row="9" column="0" colspan="2">
      <layout class="QHBoxLayout" name="buttonLayout">
       <item>
        <widget class="QPushButton" name="saveButton">

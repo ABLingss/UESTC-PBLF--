@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>602</height>
+    <width>598</width>
+    <height>407</height>
    </rect>
   </property>
   <property name="styleSheet">
@@ -43,35 +43,26 @@ QTextEdit {
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="spacing">
-     <number>10</number>
-    </property>
-    <property name="leftMargin">
-     <number>20</number>
-    </property>
-    <property name="topMargin">
-     <number>20</number>
-    </property>
-    <property name="rightMargin">
-     <number>20</number>
-    </property>
-    <property name="bottomMargin">
-     <number>20</number>
-    </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QLabel" name="orderDetailsLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>订单详情</string>
       </property>
      </widget>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="orderInfoLayout">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLabel" name="orderNumberLabel">
+       <widget class="QLabel" name="companyLabel">
         <property name="text">
-         <string>订单号: 123456</string>
+         <string>航司：123</string>
         </property>
        </widget>
       </item>
@@ -104,13 +95,6 @@ QTextEdit {
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="seatNumberLabel">
-        <property name="text">
-         <string>座位号: 12A</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QLabel" name="priceLabel">
         <property name="text">
          <string>价格: ¥500</string>
@@ -128,6 +112,13 @@ QTextEdit {
     </item>
     <item>
      <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>支付下单</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QPushButton" name="backToPreviousButton">
         <property name="cursor">

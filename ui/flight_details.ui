@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>602</height>
+    <width>608</width>
+    <height>437</height>
    </rect>
   </property>
   <property name="styleSheet">
@@ -60,98 +60,151 @@ QTableWidget::horizontalHeader {
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="spacing">
-     <number>10</number>
-    </property>
-    <property name="leftMargin">
-     <number>20</number>
-    </property>
-    <property name="topMargin">
-     <number>20</number>
-    </property>
-    <property name="rightMargin">
-     <number>20</number>
-    </property>
-    <property name="bottomMargin">
-     <number>20</number>
-    </property>
     <item>
      <widget class="QLabel" name="flightDetailsLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>航班详情</string>
       </property>
      </widget>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="flightInfoLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="flightNumberLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
-         <string>航班号: ABC123</string>
+         <string>航班号: </string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="airlineLabel">
+       <widget class="QLabel" name="id">
         <property name="text">
-         <string>航空公司: XYZ Airlines</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="departureTimeLabel">
-        <property name="text">
-         <string>出发时间: 2024-12-20 10:00</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="arrivalTimeLabel">
-        <property name="text">
-         <string>到达时间: 2024-12-20 14:00</string>
+         <string>id</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
     <item>
-     <widget class="QLabel" name="seatsInfoLabel">
-      <property name="text">
-       <string>空余座位和价格：</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="airlineLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>航空公司: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="company">
+        <property name="text">
+         <string>company</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
-     <widget class="QTableWidget" name="seatsTableWidget">
-      <property name="columnCount">
-       <number>4</number>
-      </property>
-      <property name="horizontalHeaderLabels" stdset="0">
-       <stringlist>
-        <string>座位类型</string>
-        <string>空余座位</string>
-        <string>单价</string>
-        <string>总价</string>
-       </stringlist>
-      </property>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="departureTimeLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>出发时间: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="depaturetime">
+        <property name="text">
+         <string>de</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
-      <property name="text">
-       <string>下订单</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>票价：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="price">
+        <property name="text">
+         <string>pr</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="arrivalTimeLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>到达时间: </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="arrivaltime">
+        <property name="text">
+         <string>ar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>下订单</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QPushButton" name="backToPreviousButton">
         <property name="cursor">
