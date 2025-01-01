@@ -1,40 +1,35 @@
-import sys
 import csv
 import ctypes
-from datetime import datetime, timedelta
+import os
+import sqlite3
+import sys
 from collections import defaultdict
+from ctypes import POINTER, cast, c_char_p, c_int
+from datetime import datetime
+from datetime import timedelta
 
-import pygame
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QTimer
-from PyQt5 import QtCore, QtGui, QtWidgets
-from datetime import datetime
-from ctypes import POINTER, c_ubyte, cast, c_char_p, c_int
-import sqlite3
 
-from PyQt5.QtWidgets import QTableWidgetItem
-
-from login import Ui_MainWindow as LoginUi, Ui_MainWindow
-from main import Ui_MainInterface as MainUi
-from flight_recommendation import Ui_FlightRecommendationWindow
-from flight_details import Ui_FlightDetailsWindow
-from sort_flights import Ui_FlightSortWindow
+from Order_manager import Ui_OrderEditWindow as OrderEditWindow
+from Profile_manager import Ui_ProfileManagementWindow as ProfileManagerUi
 from comment import Ui_CommentAddWindow
 from commentmanagement import Ui_CommentManagementWindow
-from order_management import Ui_OrderManagementWindow
-from order_details import Ui_OrderDetailsWindow
+from flight_details import Ui_FlightDetailsWindow
+from flight_manager import Ui_admin_privileges as FlightsManagerWindow
+from flight_recommendation import Ui_FlightRecommendationWindow
+from login import Ui_MainWindow as LoginUi
+from main import Ui_MainInterface as MainUi
 from main_manager import Ui_MainInterface as MainManagerUi
-from manager import Ui_AdminDashboardWindow as AdminUi
+from order_details import Ui_OrderDetailsWindow
+from order_management import Ui_OrderManagementWindow
 from profile import Ui_ProfileManagementWindow as ProfilemanagerControl
-from Profile_manager import Ui_ProfileManagementWindow as ProfileManagerUi
 from query_flights import Ui_FlightSearchWindow as QueryFlightSearchWindow
 from scroll_of_about import ScrollingTextWindow
-from Order_manager import Ui_OrderEditWindow as OrderEditWindow
-from flight_manager import Ui_admin_privileges as FlightsManagerWindow
 from smallgames import SmallGamesWindow
+from sort_flights import Ui_FlightSortWindow
 
-from PyQt5 import QtWidgets
-from eluosi import EluosiWindow
+
 admin_hash_password = '17be601bf8b908059f8d63bc0231baf9f27ce43be277061169e19c58d00609ab'
 # 密码：NaiLongDaWang520
 
@@ -128,6 +123,15 @@ flight_management.order_change.restype = c_int
 
 flight_management.print.argtypes = [c_int]
 flight_management.print.restype = None
+
+def resource_path(relative_path):
+    """获取打包后资源文件的路径"""
+    try:
+        # PyInstaller 创建的临时文件夹路径
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 class LoginWindow(QtWidgets.QMainWindow, LoginUi, QTimer):
     def __init__(self):
@@ -1613,10 +1617,13 @@ class OrderDetailsWindow(QtWidgets.QMainWindow, Ui_OrderDetailsWindow):
         if self.flight_id:
             self.load_flight_details()
 
+
     def back_to_main(self):
         self.close()
 
     def order(self):
+        from sendemail import sendemail
+        sendemail()
         # 通过 flight_id 从数据库获取航班信息（仍然从 flights.db 获取航班信息）
         connection = sqlite3.connect('../data/flights.db')  # 连接 flights.db 获取航班信息
         cursor = connection.cursor()
@@ -1639,6 +1646,9 @@ class OrderDetailsWindow(QtWidgets.QMainWindow, Ui_OrderDetailsWindow):
 
             # 获取当前日期
             current_date = datetime.now().strftime('%Y-%m-%d')  # 获取当前日期，格式为 'YYYY-MM-DD'
+
+            # 存储总票价
+            price = price * int(self.passenger_number.currentText())
 
             # 格式化时间字段为标准的 DATETIME 格式
             try:
@@ -1665,7 +1675,7 @@ class OrderDetailsWindow(QtWidgets.QMainWindow, Ui_OrderDetailsWindow):
                     orders_connection.commit()
 
                     # 提示用户订单已成功创建
-                    QtWidgets.QMessageBox.information(self, "订单创建", "订单已成功创建！", QtWidgets.QMessageBox.Ok)
+                    QtWidgets.QMessageBox.information(self, "订单创建", "订单已成功创建！\n邮件已成功发送", QtWidgets.QMessageBox.Ok)
                     self.statusLabel.setText("订单状态: 已支付")
                     self.close()
                 except sqlite3.Error as e:
@@ -2059,3 +2069,5 @@ if __name__ == "__main__":
     login = LoginWindow()
     login.show()
     sys.exit(app.exec_())
+
+

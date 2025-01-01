@@ -61,7 +61,8 @@ void price(){
         }
     }
 }
-/*这段代码实现了两个功能：time 函数用于对航班列表按照出发时间进行排序，print 函数用于打印排序后的航班列表*/
+
+/*time 函数用于对航班列表按照出发时间进行排序，print 函数用于打印排序后的航班列表*/
 void time(){
     int n=0;
     struct flight* temp=head;

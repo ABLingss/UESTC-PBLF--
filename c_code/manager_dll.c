@@ -43,3 +43,4 @@ int main(){
     delete2(name);
     return 0;
 }
+

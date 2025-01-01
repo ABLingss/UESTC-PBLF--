@@ -85,9 +85,9 @@ class Ui_AboutUsWindow(object):
                 background-color: #F5F5F5;
                 font-family: 'Segoe UI', sans-serif;
                 background-image: 
-                    url("D:/python/pythonProject1/frontend/assets/D315856FD459A2B52B8D781C3CFCC3D2.png")
-                    url("D:/python/pythonProject1/frontend/assets/0D0F18143C6225D0B9868C8044758203.png")
-                    url("D:/python/pythonProject1/frontend/assets/0D0F18143C6225D0B9868C8044758203.png");
+                    url("../assets/D315856FD459A2B52B8D781C3CFCC3D2.png")
+                    url("../assets/0D0F18143C6225D0B9868C8044758203.png")
+                    url("../assets/0D0F18143C6225D0B9868C8044758203.png");
                     
                 background-position: top left, top right, bottom left;
                 background-repeat: no-repeat, no-repeat, no-repeat;
