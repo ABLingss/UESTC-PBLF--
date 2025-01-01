@@ -1622,8 +1622,8 @@ class OrderDetailsWindow(QtWidgets.QMainWindow, Ui_OrderDetailsWindow):
         self.close()
 
     def order(self):
-        from sendemail import sendemail
-        sendemail()
+        # from sendemail import sendemail
+        # sendemail()
         # 通过 flight_id 从数据库获取航班信息（仍然从 flights.db 获取航班信息）
         connection = sqlite3.connect('../data/flights.db')  # 连接 flights.db 获取航班信息
         cursor = connection.cursor()
